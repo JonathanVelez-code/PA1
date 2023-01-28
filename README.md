@@ -13,7 +13,7 @@ java PA1
 4. Press enter then a printable result will appear in the command line and in the .txt file.
 
 ## Proof of Correctness
-The stratigie is to partition and run multiple threads in parallel within a range of 2 to $\(10^8)$. The ideas is to slip up the work for each thread by $\sqrt{10^8}/8 = 1,250$. A thread will be given a range for example, in the first 2-1250, the total number of primes is 952688 then moves on to the next range: 1250-2500. Each iteration within the loop creates a thread with a new runnable task to be executed by a particular thread that will be joined when completed. 
+The stratigie is to partition and run multiple threads in parallel within a range of 2 to $\(10^8)$. The ideas is to split up the work for each thread by $\sqrt{10^8}/8 = 1,250$. A thread will be given a range for example, in the first 2-1250, the total number of primes is 952688 then moves on to the next range: 1250-2500. Each iteration within the loop creates a thread with a new runnable task to be executed by a particular thread that will be joined when completed. 
 
 ## Experimental Evaluation
 
